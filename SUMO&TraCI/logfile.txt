@@ -1,0 +1,16 @@
+***Starting server on port 39293 ***
+Loading net-file from 'map/jhumap2.net.xml' ... done (15ms).
+Loading done.
+Simulation started with time: 0.00.
+Warning: Route file should be sorted by departure time, ignoring '0'!
+Simulation ended at time: 143.00
+Performance: 
+ Duration: 234.59s
+ TraCI-Duration: 12.24s
+ Real time factor: 0.609587
+ UPS: 28.607967
+Vehicles: 
+ Inserted: 97
+ Running: 45
+ Waiting: 0
+

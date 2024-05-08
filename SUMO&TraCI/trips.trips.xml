@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2024-05-04 18:13:04.251288 by randomTrips.py UNKNOWN
+<configuration>
+    <net-file value="map/jhumap2.net.xml"/>
+    <route-file value="your_output_routes.rou.xml"/>
+    <length value="True"/>
+    <end value="100.0"/>
+</configuration>
+-->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+
+    <!-- 定义车辆类型-->
+    <vType id="normalCar" accel="2.6" decel="4.5" sigma="0.5" length="5" minGap="2.5" maxSpeed="33.33" guiShape="passenger" 
+           lcStrategic="1.0" lcSpeedGain="0.5" lcCooperative="0.5" lcKeepRight="1.0" emergencyDecel="4.5"/>
+    <vType id="emergencyVehicle" accel="3.0" decel="4.5" sigma="0.5" length="6.5" minGap="2.0" maxSpeed="60" color="red" guiShape="emergency" 
+           emergencyDecel="9.0" lcStrategic="1.0" lcSpeedGain="1.0" lcCooperative="0.5" lcKeepRight="0.3"/>
+
+
+    <!-- 添加救护车实例
+    <vehicle id="emergency1" type="emergencyVehicle" depart="0.00">
+        <route edges = "375012288#1 111782596#2 -117446409#4 -117446409#3 -117446409#2 130451981#2 130451981#3 375012288#0 375012288#1 375012288#5 947448834#1 425002736#1 399093877#1 455277311#1 -455277308#4 -455277308#2 -369149192 375706787#0 375706787#1 818850670 818850643 818850680 818862103#1 132381955#0 132381956"/>
+    </vehicle>
+
+    <vehicle id="emergency2" type="emergencyVehicle" depart="0.00">
+        <route edges = "375012288#1 111782596#2 -117446409#4 -117446409#3 -117446409#2 130451981#2 130451981#3 375012288#0 375012288#1 375012288#5 947448834#1 425002736#1 399093877#1 455277311#1 -455277308#4 -455277308#2 -369149192 375706787#0 375706787#1 818850670 818850643 818850680 818862103#1 132381955#0 132381956"/>
+    </vehicle> -->
+
+    <trip id= "emergency1" type="emergencyVehicle" depart="0.00" from="375012288#1" to="132381956"/>
+    <trip id= "emergency2" type="emergencyVehicle" depart="1.00" from="375012288#1" to="132381956"/>
+
+    <trip id="0" type="normalCar" depart="0.00" from="375012288#1" to="-117446409#2"/>
+    <trip id="1" type="normalCar" depart="1.00" from="114055266#2" to="114055266#2"/>
+    <trip id="2" type="normalCar" depart="2.00" from="425002736#1" to="455277311#1"/>
+    <trip id="3" type="normalCar" depart="3.00" from="6013605#0" to="-1264199706#0"/>
+    <trip id="4" type="normalCar" depart="4.00" from="1264199706#0" to="-117446409#2"/>
+    <trip id="5" type="normalCar" depart="5.00" from="1027139279" to="375012288#8"/>
+    <trip id="6" type="normalCar" depart="6.00" from="-1158269759#1" to="111782596#2"/>
+    <trip id="7" type="normalCar" depart="7.00" from="375012288#5" to="375012289#1"/>
+    <trip id="8" type="normalCar" depart="8.00" from="1027139279" to="375706787#1"/>
+    <trip id="9" type="normalCar" depart="9.00" from="522343538#1" to="-1038777897#0"/>
+    <trip id="10" type="normalCar" depart="10.00" from="522343538#1" to="522343538#1"/>
+    <trip id="11" type="normalCar" depart="11.00" from="114746202" to="-947448831#1"/>
+    <trip id="12" type="normalCar" depart="12.00" from="947448831#1" to="130451981#2"/>
+    <trip id="13" type="normalCar" depart="13.00" from="-375706785#1" to="-1264199706#0"/>
+    <trip id="14" type="normalCar" depart="14.00" from="543918805#0" to="375706787#1"/>
+    <trip id="15" type="normalCar" depart="15.00" from="522343538#1" to="522343538#2"/>
+    <trip id="16" type="normalCar" depart="16.00" from="132609849#0" to="972954821#1"/>
+    <trip id="17" type="normalCar" depart="17.00" from="125266910#2" to="375012289#1"/>
+    <trip id="18" type="normalCar" depart="18.00" from="522343538#2" to="399093877#1"/>
+    <trip id="19" type="normalCar" depart="19.00" from="6013605#0" to="375706785#5"/>
+    <trip id="20" type="normalCar" depart="20.00" from="375706787#1" to="-125266910#1"/>
+    <trip id="21" type="normalCar" depart="21.00" from="1027139279" to="125266910#1"/>
+    <trip id="22" type="normalCar" depart="22.00" from="-125266910#4" to="114055266#3"/>
+    <trip id="23" type="normalCar" depart="23.00" from="-375706785#3" to="117446409#4"/>
+    <trip id="24" type="normalCar" depart="24.00" from="375012288#0" to="132381956"/>
+    <trip id="25" type="normalCar" depart="25.00" from="125266910#1" to="111782596#2"/>
+    <trip id="26" type="normalCar" depart="26.00" from="111782596#2" to="947448834#1"/>
+    <trip id="27" type="normalCar" depart="27.00" from="375012288#5" to="375706787#1"/>
+    <trip id="28" type="normalCar" depart="28.00" from="-6011538#2" to="522343538#2"/>
+    <trip id="29" type="normalCar" depart="29.00" from="-6011538#2" to="132381956"/>
+    <trip id="30" type="normalCar" depart="30.00" from="947448834#1" to="425002742"/>
+    <trip id="31" type="normalCar" depart="31.00" from="132609849#0" to="455277311#1"/>
+    <trip id="32" type="normalCar" depart="32.00" from="543768349#0" to="543768349#0"/>
+    <trip id="33" type="normalCar" depart="33.00" from="1027139279" to="-117446409#3"/>
+    <trip id="34" type="normalCar" depart="34.00" from="114746202" to="117446409#2"/>
+    <trip id="35" type="normalCar" depart="35.00" from="-947448831#2" to="972954821#1"/>
+    <trip id="36" type="normalCar" depart="36.00" from="6013605#0" to="125266910#4"/>
+    <trip id="37" type="normalCar" depart="37.00" from="375012288#5" to="132381956"/>
+    <trip id="38" type="normalCar" depart="38.00" from="809232451#3" to="375012288#0"/>
+    <trip id="39" type="normalCar" depart="39.00" from="111782596#2" to="1158269759#1"/>
+    <trip id="40" type="normalCar" depart="40.00" from="132609861#2" to="1158269759#1"/>
+    <trip id="41" type="normalCar" depart="41.00" from="369149190" to="947448831#1"/>
+    <trip id="42" type="normalCar" depart="42.00" from="125266910#4" to="114055266#2"/>
+    <trip id="43" type="normalCar" depart="43.00" from="979417612#0" to="375012288#8"/>
+    <trip id="44" type="normalCar" depart="44.00" from="-125266910#4" to="-125266910#2"/>
+    <trip id="45" type="normalCar" depart="45.00" from="-455277308#2" to="425002740"/>
+    <trip id="46" type="normalCar" depart="46.00" from="455277311#1" to="132381956"/>
+    <trip id="47" type="normalCar" depart="47.00" from="-125266910#1" to="132381956"/>
+    <trip id="48" type="normalCar" depart="48.00" from="979417612#0" to="375012288#8"/>
+    <trip id="49" type="normalCar" depart="49.00" from="947448834#1" to="809232451#3"/>
+    <trip id="50" type="normalCar" depart="50.00" from="-1085618316#3" to="522343538#2"/>
+    <trip id="51" type="normalCar" depart="51.00" from="375706786#0" to="375012288#8"/>
+    <trip id="52" type="normalCar" depart="52.00" from="111782596#2" to="426816164#1"/>
+    <trip id="53" type="normalCar" depart="53.00" from="-455277308#2" to="132609861#2"/>
+    <trip id="54" type="normalCar" depart="54.00" from="1267368800#0" to="972954821#1"/>
+    <trip id="55" type="normalCar" depart="55.00" from="6013605#0" to="1158269759#1"/>
+    <trip id="56" type="normalCar" depart="56.00" from="130451981#2" to="1027139279"/>
+    <trip id="57" type="normalCar" depart="57.00" from="809232451#1" to="818850670"/>
+    <trip id="58" type="normalCar" depart="58.00" from="114746202" to="425002742"/>
+    <trip id="59" type="normalCar" depart="59.00" from="369149190" to="-947448831#1"/>
+    <trip id="60" type="normalCar" depart="60.00" from="455277308#1" to="375012288#8"/>
+    <trip id="61" type="normalCar" depart="61.00" from="455277311#1" to="375012288#8"/>
+    <trip id="62" type="normalCar" depart="62.00" from="-1085618316#2" to="130451981#1"/>
+    <trip id="63" type="normalCar" depart="63.00" from="-1158269759#1" to="947448834#1"/>
+    <trip id="64" type="normalCar" depart="64.00" from="6013605#0" to="6011538#0"/>
+    <trip id="65" type="normalCar" depart="65.00" from="114746202" to="-125266910#2"/>
+    <trip id="66" type="normalCar" depart="66.00" from="6013605#0" to="972954821#1"/>
+    <trip id="67" type="normalCar" depart="67.00" from="-125266910#4" to="375012288#5"/>
+    <trip id="68" type="normalCar" depart="68.00" from="-125266910#2" to="522343538#3"/>
+    <trip id="69" type="normalCar" depart="69.00" from="455277308#3" to="-455277308#4"/>
+    <trip id="70" type="normalCar" depart="70.00" from="130451981#0" to="375012289#1"/>
+    <trip id="71" type="normalCar" depart="71.00" from="111782596#2" to="818850670"/>
+    <trip id="72" type="normalCar" depart="72.00" from="1264199706#0" to="111782596#2"/>
+    <trip id="73" type="normalCar" depart="73.00" from="132609849#0" to="522343538#2"/>
+    <trip id="74" type="normalCar" depart="74.00" from="-947448831#1" to="125266910#4"/>
+    <trip id="75" type="normalCar" depart="75.00" from="979417612#0" to="455277308#1"/>
+    <trip id="76" type="normalCar" depart="76.00" from="1267368800#0" to="375012288#8"/>
+    <trip id="77" type="normalCar" depart="77.00" from="-455277308#4" to="114055266#2"/>
+    <trip id="78" type="normalCar" depart="78.00" from="114746202" to="375706787#1"/>
+    <trip id="79" type="normalCar" depart="79.00" from="1027139279" to="114055266#2"/>
+    <trip id="80" type="normalCar" depart="80.00" from="-125266910#2" to="425002742"/>
+    <trip id="81" type="normalCar" depart="81.00" from="1027139279" to="947448831#1"/>
+    <trip id="82" type="normalCar" depart="82.00" from="6013605#0" to="-125266910#4"/>
+    <trip id="83" type="normalCar" depart="83.00" from="1085618316#1" to="455277308#3"/>
+    <trip id="84" type="normalCar" depart="84.00" from="1027139279" to="-455277308#4"/>
+    <trip id="85" type="normalCar" depart="85.00" from="818850680" to="375706785#1"/>
+    <trip id="86" type="normalCar" depart="86.00" from="130451981#0" to="543918805#0"/>
+    <trip id="87" type="normalCar" depart="87.00" from="522343538#1" to="1085618316#3"/>
+    <trip id="88" type="normalCar" depart="88.00" from="-375706785#1" to="132609861#2"/>
+    <trip id="89" type="normalCar" depart="89.00" from="1264199706#0" to="375012288#1"/>
+    <trip id="90" type="normalCar" depart="90.00" from="399093877#1" to="455277311#1"/>
+    <trip id="91" type="normalCar" depart="91.00" from="947448834#1" to="-1264199706#0"/>
+    <trip id="92" type="normalCar" depart="92.00" from="1264199706#0" to="130451981#2"/>
+    <trip id="93" type="normalCar" depart="93.00" from="6013605#0" to="1158269759#1"/>
+    <trip id="94" type="normalCar" depart="94.00" from="-6011538#2" to="132609915#1"/>
+    <trip id="95" type="normalCar" depart="95.00" from="1264199706#0" to="117446409#4"/>
+    <trip id="96" type="normalCar" depart="96.00" from="1085618316#3" to="947448834#1"/>
+    <trip id="97" type="normalCar" depart="97.00" from="1267368800#0" to="809232451#3"/>
+    <trip id="98" type="normalCar" depart="98.00" from="132609849#0" to="-125266910#2"/>
+    <trip id="99" type="normalCar" depart="99.00" from="979417612#0" to="6011538#0"/>
+</routes>
